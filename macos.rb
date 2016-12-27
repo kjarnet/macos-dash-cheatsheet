@@ -1,39 +1,38 @@
 cheatsheet do
-  title 'Sample'               # Will be displayed by Dash in the docset list
-  docset_file_name 'Sample'    # Used for the filename of the docset
-  keyword 'sample'             # Used as the initial search keyword (listed in Preferences > Docsets)
+  title 'MacOS'               # Will be displayed by Dash in the docset list
+  docset_file_name 'macos'    # Used for the filename of the docset
+  keyword 'macos'             # Used as the initial search keyword (listed in Preferences > Docsets)
   # resources 'resources_dir'  # An optional resources folder which can contain images or anything else
 
-  introduction 'My *awesome* cheat sheet'  # Optional, can contain Markdown or HTML
+  introduction 'Shortcuts etc. for MacOS'  # Optional, can contain Markdown or HTML
 
   # A cheat sheet must consist of categories
   category do
-    id 'Windows'  # Must be unique and is used as title of the category
+    id 'Finder'  # Must be unique and is used as title of the category
 
     entry do
-      command 'CMD+N'         # Optional
-      command 'CMD+SHIFT+N'   # Multiple commands are supported
-      name 'Create window'    # A short name, can contain Markdown or HTML
-      notes 'Some notes'      # Optional longer explanation, can contain Markdown or HTML
+      command 'CMD+SHIFT+.'         # Optional
+      name 'Show hidden files'    # A short name, can contain Markdown or HTML
+      notes 'Also works in "Open File" dialog'      # Optional longer explanation, can contain Markdown or HTML
     end
     entry do
-      command 'CMD+W'
-      name 'Close window'
+      command 'CMD+SHIFT+G'
+      name 'Go to folder'
     end
   end
 
   category do
-    id 'Code'
+    id 'Path Finder'
     entry do
-      name 'Code sample'
-      notes <<-'END'
-        ```ruby
-        sample = "You can include code snippets as well"
-        ```
-        Or anything else **Markdown** or HTML.
-      END
+      command 'CTRL+H'
+      name 'Show hidden (invisible) files'
+    end
+    entry do
+      command 'CMD+SHIFT+I'
+      name 'Show hidden (invisible) files'
+      notes 'Default'
     end
   end
 
-  notes 'Some notes at the end of the cheat sheet'
+  notes 'Some of these shortcuts are my personal configuration.'
 end
